@@ -28,11 +28,12 @@
 
 #        Id, was given the header - animal_id.
 
-#        Age, was the age determined at capture, thusly was given the 
+#        Age, was the age determined at capture & thusly given the 
 #        header - capture_age.
 
 #        Year, month & day were organised into a date format required for 
-#        our used programmes, for example: 29-Aug-15. Given the header - date.
+#        our used programmes, for example: 29-Aug-15. 
+#        It was given the header - date.
 
 #        Only encounters between 2009-2016 were used.
 
@@ -40,6 +41,8 @@
 #      for example: 17-20. 
 #      So, these would be averaged and rounded up, 
 #      for example: 17+20=37,  37/2=18.5,   rounded up =19.
+#      The specific day was not of importance, as we organised individuals
+#      by the year and month of capture.
 
 # 3.2) These columns were copy and pasted & then saved as a CVS file, 
 #      using "Notepad++"
@@ -81,12 +84,12 @@
       y[,2:k]<-(y[,2:k]>0)*1
 
 # 6) This creates a data frame of encounters histories, 
-#    where only individuals where the age at first capture code = 1.
+#    where only individuals that the age at first capture code = 1.
 #    (Safring ring guide, 1 = 0-0.5 yrs old)
 
      true_age.df <- y[y$capture_age == 1, ]
 
-# 7) This pasty function allows the above data frame to turn into a CH,
+# 7) This pasty function allows the above data frame to turn into a CH for
 #    in the next step.
 
      pasty<-function(x) 
@@ -275,7 +278,7 @@
 
 # x) Models Selection: Here, models were created sequentially, first testing 
 #                      the best p, and then Phi. The c-hat = 1, 
-#                      Models were compared by AICc, Model list was called to
+#                      models were compared by AICc, the model list was called to
 #                      assess the produced models.
      
      Phi.c.t.p.t.results    = run.mark.model(Phi.c.t.p.t   )
@@ -302,4 +305,4 @@
                   external = FALSE) 
      
 # Results of estimates were retrieved by entering a model's results into the
-# Console, for example: "Phi.a.p.cst.results".
+# console, for example: "Phi.a.p.cst.results".
