@@ -191,15 +191,15 @@
 # 3) These functions can be called for their specific data design in age bins.
           
 #    Age structure - a -  age binned as 0-1, 1+ 
-     ddl = add.design.data(true_age.proc,ddl, parameter = "Phi", type  = "age",
-                                  bins=c(0,1,10),  name = "a",  right = FALSE)
+     ddl = add.design.data(true_age.proc,ddl, parameter="Phi",type ="age",
+                                  bins=c(0,1,10),name="a", right=FALSE)
      
 #    Age structure - b -  age binned as 0-3, 3+ 
      ddl = add.design.data(true_age.proc,ddl,parameter="Phi",type="age",
                                   bins=c(0,3,10),name="b", right=FALSE)
      
 #    Age structure - c -  age binned as 0-1, 1-3, 3+ 
-     ddl = add.design.data(true_age.proc,ddl, parameter = "Phi",type="age",
+     ddl = add.design.data(true_age.proc,ddl,parameter="Phi",type="age",
                            bins=c(0,1,3,10),name="c", right=FALSE)
                            
 #                  ---List of Model Parameter Designs---
@@ -233,31 +233,31 @@
 # ########################################################################### #
      
      Phi.c.t.p.t     = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.time.c   , 
+                                       parameters = list(Phi = Phi.time.c    , 
                                                          p   = p.time        ))
      
      Phi.c.t.p.cst   = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.time.c   , 
+                                       parameters = list(Phi = Phi.time.c    , 
                                                          p   = p.cst         ))
      
 # ########################################################################### #
   
      Phi.c.a.t.p.t   = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.time.a.c , 
-                                                         p   = p.time        )
+                                       parameters = list(Phi = Phi.time.a.c  , 
+                                                         p   = p.time        ))
                                        
      Phi.c.p.t       = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.c        , 
+                                       parameters = list(Phi = Phi.c         , 
                                                          p   = p.time        ))
      
 # ########################################################################### #
      
      Phi.b.a.t.p.t   = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.time.a.b , 
+                                       parameters = list(Phi = Phi.time.a.b  , 
                                                          p   = p.time        ))
 
      Phi.a.a.t.p.t   = make.mark.model(true_age.proc, ddl, 
-                                       parameters = list(Phi = Phi.time.a.a , 
+                                       parameters = list(Phi = Phi.time.a.a  , 
                                                          p   = p.time        ))
      
 # ########################################################################### #     
@@ -293,9 +293,9 @@
      Phi.b.a.t.p.t.results  = run.mark.model(Phi.b.a.t.p.t )
      
      
-     Phi.c.p.cst.results = run.mark.model(Phi.c.p.cst )
-     Phi.b.p.cst.results = run.mark.model(Phi.b.p.cst )
-     Phi.a.p.cst.results = run.mark.model(Phi.a.p.cst )
+     Phi.c.p.cst.results    = run.mark.model(Phi.c.p.cst   )
+     Phi.b.p.cst.results    = run.mark.model(Phi.b.p.cst   )
+     Phi.a.p.cst.results    = run.mark.model(Phi.a.p.cst   )
 
 #  Call all models that have ran
 
