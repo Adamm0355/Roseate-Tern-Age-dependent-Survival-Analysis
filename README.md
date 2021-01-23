@@ -3,6 +3,7 @@
 # Date Created:  15/12/2020  
 
 # Using R2Ucare &amp; RMark, I perform an age-dependent analysis of survival 
+# Best viewed "raw"
 
 # ########################################################################### #
 # #-----------------------------Where to start------------------------------# #
